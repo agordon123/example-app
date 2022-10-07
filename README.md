@@ -64,3 +64,5 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+I want to use this project combined with nuxt to better understand how Laravel works.  I want to build an Authentication system from scratch, hook up mysql/phpmyadmin,
