@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::post('/logout', [AuthController::class, 'logout']);
 Route::get('/', function () {
     return ['Laravel' => app()->version()];
 });

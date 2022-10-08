@@ -3,9 +3,12 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Models\Sanctum\PersonalAccessToken;
+use Laravel\Sanctum\Sanctum;
 
 class AppServiceProvider extends ServiceProvider
 {
+
     /**
      * Register any application services.
      *
@@ -13,7 +16,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+            if ($this->app->environment('local')) {
+        $this->app->register(\Laravel\Telescope\TelescopeServiceProvider::class);
+        $this->app->register(TelescopeServiceProvider::class);
+    }
     }
 
     /**
@@ -23,6 +29,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+
     }
 }

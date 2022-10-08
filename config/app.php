@@ -56,9 +56,9 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
-    'frontend_url' => env('FRONTEND_URL', 'http://localhost:3000'),
+    'frontend_url' => env('FRONTEND_URL', 'http://localhost'),
 
-    'asset_url' => env('ASSET_URL'),
+    'asset_url' => env('ASSET_URL',null),
 
     /*
     |--------------------------------------------------------------------------
@@ -71,7 +71,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'America/New_York',
 
     /*
     |--------------------------------------------------------------------------
@@ -196,6 +196,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\TelescopeServiceProvider::class,
 
     ],
 
@@ -212,6 +213,32 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
+        'App' => Illuminate\Support\Facades\App::class,
+        'Arr' => Illuminate\Support\Arr::class,
+        'Artisan' => Illuminate\Support\Facades\Artisan::class,
+        'Auth' => Illuminate\Support\Facades\Auth::class,
+        'Blade' => Illuminate\Support\Facades\Blades::class,
+        'Broadcast' => Illuminate\Support\Facades\Broadcast::class,
+        'Bus' => Illuminate\Support\Facades\Bus::class,
+        'Cache' => Illuminate\Support\Facades\Cache::class,
+        'Config' => Illuminate\Support\Facades\Config::class,
+        'Cookie' => Illuminate\Support\Facades\Cookie::class,
+        'Crypt'  => Illuminate\Support\Facades\Crypt::class,
+        'Date' => Illuminate\Support\Facades\Date::class,
+        'DB' => Illuminate\Support\Facades\DB::class,
+        'Eloquent' => Illuminate\Database\Eloquent\Model::class,
+        'Event'  => Illuminate\Support\Facades\Event::class,
+        'File' => Illuminate\Support\Facades\File::class,
+        'Gate' => Illuminate\Support\Facades\Gate::class,
+        'Hash' => Illuminate\Support\Facades\Hash::class,
+        'Http' => Illuminate\Support\Facades\Http::class,
+        'Lang' => Illuminate\Support\Facades\Lang::class,
+        'Log' => Illuminate\Support\Facades\Log::class,
+        'Mail' => Illuminate\Support\Facades\Mail::class,
+        'Notification' => Illuminate\Support\Facades\Notification::class,
+        'Image' => Intervention\Image\Facades\Image::class,
+
+
     ])->toArray(),
 
 ];
